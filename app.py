@@ -6,6 +6,8 @@ import io
 import joblib  
 from category_encoders import OrdinalEncoder
 from sklearn.preprocessing import StandardScaler
+from sklearn import set_config
+set_config(transform_output = 'pandas')
 
 # Function to load the model from a zipped file
 def load_model_from_zip(zip_file_path, model_filename):

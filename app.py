@@ -173,16 +173,16 @@ def main():
 
         prediction = model.predict(preprocessed_data)
 
-        if prediction[0] == 0:
+        if prediction == 0:
 
             st.success("""You are a low risk investor.\nLow-risk investors are typically more conservative and prioritize capital preservation over high returns. They are less willing to accept fluctuations in the value of their investments.\nHere are some investment options suitable for low-risk investors: Savings Accounts and CDs, Government Bonds, High-Quality Corporate Bonds, Money Market Funds
             """)
 
-        elif prediction[0] == 1:
+        elif prediction == 1:
 
             st.success("""You are a moderate risk investor.\nModerate-risk investors are willing to take on some level of risk in exchange for potentially higher returns than low-risk investments. They have a balanced approach to risk and return.\nSuitable investment options for moderate-risk investors include: Diversified Mutual Funds, Index Funds and ETFs, Blue-Chip Stocks, Real Estate Investment Trusts (REITs)""")
 
-        elif prediction[0] == 2:
+        elif prediction == 2:
 
             st.success("""You are a high risk investor.\nHigh-risk investors are more aggressive and seek higher returns, understanding that they may experience significant volatility and potential losses. They have a longer time horizon and are willing to take chances for potentially higher rewards.\nHere are investment options suitable for high-risk investors: Individual Stocks, Sector Funds, Commodities and Precious Metals,Venture Capital and Angel Investments
     """)

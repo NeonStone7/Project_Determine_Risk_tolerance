@@ -64,7 +64,7 @@ try:
 except Exception as e:
     st.error(f"Error loading the model: {e}")
 
-preprocessor = joblib.load('preprocessor_pkl.pkl')
+loaded_preprocessor = joblib.load('preprocessor_pkl.pkl')
 
 selected_columns = ['AGE',
  'Education_years',

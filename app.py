@@ -4,6 +4,7 @@ import streamlit as st
 import zipfile
 import io
 import joblib  
+from sklearn.preprocessing import FunctionTransformer
 
 def random_sample_imputer(dataframe):
     

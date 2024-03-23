@@ -7,17 +7,11 @@ import joblib
 from sklearn.preprocessing import FunctionTransformer
 
 def random_sample_imputer(dataframe):
-    
     for column in dataframe:
-        
-        number_of_nans =  dataframe[column].isnull().sum()
-        
-        sample =  dataframe[column].dropna().sample(number_of_nans)
-        
-        sample.index = dataframe.loc[dataframe[column].isnull(), column].index
-        
-        dataframe.loc[dataframe[column].isnull(), column] = sample
-        
+        nan_indices = dataframe[dataframe[column].isnull()].index
+        number_of_nans = len(nan_indices)
+        sample = dataframe[column].dropna().sample(number_of_nans)
+        dataframe.loc[nan_indices, column] = sample.values
     return dataframe
 
 func_random_sample_imputer = FunctionTransformer(random_sample_imputer)

@@ -93,7 +93,7 @@ def main():
     
     sex = st.selectbox('What is your sex?', ['Female', 'Male'])
     age = st.number_input('How old are you?')
-    married = st.selectbox('Are you married?', ['Married', 'Single'])
+    married = st.selectbox('Are you married?', ['Yes', 'No'])
     Family_structure = st.selectbox('What is your family structure?',['Single abode','Married couple','Single Parent','Extended family','Other'])
     RACE = st.selectbox('What is your race?',['White/caucasian','Black/African-american', 'Hispanic/Latino','Asian','Others'])
     Occupation = st.selectbox('What is your occupation?',['Managerial/Professional','Technical/Sales/Services','Other','Not-working'])

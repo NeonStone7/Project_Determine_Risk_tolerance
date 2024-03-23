@@ -4,7 +4,7 @@ import streamlit as st
 import zipfile
 import io
 import joblib  
-from category_encoders import OneHotEncoder
+from category_encoders import OrdinalEncoder
 from sklearn.preprocessing import StandardScaler
 
 # Function to load the model from a zipped file
@@ -167,7 +167,7 @@ def main():
 
         preprocessed_data = loaded_preprocessor.transform(data)
 
-        preprocessed_data = preprocessed_data[selected_columns]
+        preprocessed_data = preprocessed_data.loc[:, selected_columns]
 
         prediction = loaded_model.predict(preprocessed_data)
 

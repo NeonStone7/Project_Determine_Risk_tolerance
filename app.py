@@ -4,6 +4,8 @@ import streamlit as st
 import zipfile
 import io
 import joblib  
+from category_encoders import OneHotEncoder
+from sklearn.preprocessing import StandardScaler
 
 # Function to load the model from a zipped file
 def load_model_from_zip(zip_file_path, model_filename):

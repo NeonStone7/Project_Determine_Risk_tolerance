@@ -106,12 +106,6 @@ selected_columns = ['AGE',
 def main():
     
     st.title('Determine Risk Tolerance')
-    
-    html_temp = """
-    <div style="background:#025246 ;padding:10px">
-    <h2 style="color:white;text-align:center;">Risk Tolerance App </h2>
-    </div>
-    """
         
     st.markdown(html_temp, unsafe_allow_html = True)
     
@@ -121,14 +115,14 @@ def main():
     
     # input data
     
-    sex = st.select_box('What is your sex?', ['Female', 'Male'])
+    sex = st.selectbox('What is your sex?', ['Female', 'Male'])
     age = st.number_input('How old are you?')
-    married = st.select_box('Are you married?', ['Married', 'Single'])
-    Family_structure = st.select_box('What is your family structure?',['Single abode','Married couple','Single Parent','Extended family','Other'])
-    RACE = st.select_box('What is your race?',['White/caucasian','Black/African-american', 'Hispanic/Latino','Asian','Others'])
-    Occupation = st.select_box('What is your occupation?',['Managerial/Professional','Technical/Sales/Services','Other','Not-working'])
+    married = st.selectbox('Are you married?', ['Married', 'Single'])
+    Family_structure = st.selectbox('What is your family structure?',['Single abode','Married couple','Single Parent','Extended family','Other'])
+    RACE = st.selectbox('What is your race?',['White/caucasian','Black/African-american', 'Hispanic/Latino','Asian','Others'])
+    Occupation = st.selectbox('What is your occupation?',['Managerial/Professional','Technical/Sales/Services','Other','Not-working'])
     
-    currency = st.select_box('What is your currency?', ['USD','EUR', 'Naira', 'Others'])
+    currency = st.selectbox('What is your currency?', ['USD','EUR', 'Naira', 'Others'])
      
     if currency == 'Others':
         
@@ -160,31 +154,31 @@ def main():
         st.markdown('Your currency is not available, please convert to dollar and input values in dollar')
         
 
-    Spending_to_income = st.select_box('What is your spending to income category?',['Spending_exceeds_income','Spending_equals_income','Income_exceeds_spending'])
+    Spending_to_income = st.selectbox('What is your spending to income category?',['Spending_exceeds_income','Spending_equals_income','Income_exceeds_spending'])
 
-    Late_payment = st.select_box('Any late loan payments in the last year?',['Yes','No'])
+    Late_payment = st.selectbox('Any late loan payments in the last year?',['Yes','No'])
 
-    Fear_loan_denial = st.select_box('Do you fear being denied loans?',['Yes','No'])
+    Fear_loan_denial = st.selectbox('Do you fear being denied loans?',['Yes','No'])
 
-    Use_emergency_savings = st.select_box('Do you use your savings in a financial emergency or other options like cut-backs or loans?',['Yes','No'])
+    Use_emergency_savings = st.selectbox('Do you use your savings in a financial emergency or other options like cut-backs or loans?',['Yes','No'])
 
-    Financial_Risk = st.select_box('Are you willing to take financial risks?',['Yes','No'])
+    Financial_Risk = st.selectbox('Are you willing to take financial risks?',['Yes','No'])
 
-    Level_of_financial_literacy = st.select_box('Level of financial literacy?',['0','1','2','3'])
+    Level_of_financial_literacy = st.selectbox('Level of financial literacy?',['0','1','2','3'])
     
     Level_of_financial_literacy = int(Level_of_financial_literacy)
 
-    Has_brokerage_account = st.select_box('Do you have a brokerage account?',['Yes','No'])
+    Has_brokerage_account = st.selectbox('Do you have a brokerage account?',['Yes','No'])
 
-    Traded_in_the_past_year = st.select_box('Have you traded in the past year?',['Yes','No'])
+    Traded_in_the_past_year = st.selectbox('Have you traded in the past year?',['Yes','No'])
 
-    Has_financial_assets = st.select_box('Do you have financial assets?',['Yes','No'])
+    Has_financial_assets = st.selectbox('Do you have financial assets?',['Yes','No'])
 
-    Owns_home = st.select_box('Do you own a home?',['Yes','No'])
+    Owns_home = st.selectbox('Do you own a home?',['Yes','No'])
 
-    Owns_business_assets = st.select_box('Do you own business assets?',['Yes','No'])
+    Owns_business_assets = st.selectbox('Do you own business assets?',['Yes','No'])
 
-    Owns_non_financial_assets = st.select_box('Do you own non-financial assets?',['Yes','No'])
+    Owns_non_financial_assets = st.selectbox('Do you own non-financial assets?',['Yes','No'])
     
     if st.button('Determine Risk tolerance'):
         

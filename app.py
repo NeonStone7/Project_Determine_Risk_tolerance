@@ -171,7 +171,7 @@ def main():
 
         preprocessed_data = preprocessed_data.loc[:, selected_columns]
 
-        prediction = loaded_model.predict(preprocessed_data)
+        prediction = model.predict(preprocessed_data)
 
         if prediction[0] == 0:
 

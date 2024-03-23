@@ -79,7 +79,7 @@ def main():
     
     st.title('Determine Risk Tolerance')
     
-     html_temp = """
+    html_temp = """
     <div style="background:#025246 ;padding:10px">
     <h2 style="color:white;text-align:center;">Risk Tolerance App </h2>
     </div>
@@ -120,14 +120,12 @@ def main():
         Amount_on_homefood = Amount_on_homefood/0.92
         Amount_on_takeout = Amount_on_takeout/0.92
         INCOME = INCOME/0.92
-        Amount_on_homefood = Amount_on_homefood/0.92
     
     elif currency == 'Naira':
         
         Amount_on_homefood = Amount_on_homefood/1469
         Amount_on_takeout = Amount_on_takeout/1469
         INCOME = INCOME/1469
-        educa = educa/1469
   
     elif currency == 'Others':
         

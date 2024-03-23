@@ -106,9 +106,7 @@ selected_columns = ['AGE',
 def main():
     
     st.title('Determine Risk Tolerance')
-        
-    st.markdown(html_temp, unsafe_allow_html = True)
-    
+            
     st.markdown("""This model was trained on 10K samples\nTrain F1 Score: 97.5%\nTest F1 Score:71.8%""")
     
     st.markdown("""Disclaimer: This is a simple model. Please do not make any investment decisions based your result.""")

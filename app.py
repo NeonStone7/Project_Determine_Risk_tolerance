@@ -85,6 +85,9 @@ def main():
     st.markdown("""This model was trained on 10K samples\nTrain F1 Score: 97.5%\nTest F1 Score:71.8%""")
     
     st.markdown("""Disclaimer: This is a simple model. Please do not make any investment decisions based your result.""")
+
+    st.markdown('Most important features for prediction')
+    st.image('feature_importance.png')
     
     # input data
     

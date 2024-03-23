@@ -5,6 +5,33 @@ import zipfile
 import io
 import joblib  
 
+def random_sample_imputer(dataframe):
+    
+    for column in dataframe:
+        
+        number_of_nans =  dataframe[column].isnull().sum()
+        
+        sample =  dataframe[column].dropna().sample(number_of_nans)
+        
+        sample.index = dataframe.loc[dataframe[column].isnull(), column].index
+        
+        dataframe.loc[dataframe[column].isnull(), column] = sample
+        
+    return dataframe
+
+func_random_sample_imputer = FunctionTransformer(random_sample_imputer)
+
+def count_encoder(dataframe):
+    
+    for column in dataframe:
+        
+        my_map = dataframe[column].value_counts(normalize = True).to_dict()
+        
+        dataframe[column] = dataframe[column].map(my_map)
+        
+    return dataframe
+
+func_count_encoder = FunctionTransformer(count_encoder)
 
 # Function to load the model from a zipped file
 def load_model_from_zip(zip_file_path, model_filename):

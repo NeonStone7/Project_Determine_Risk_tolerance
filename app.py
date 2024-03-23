@@ -25,7 +25,7 @@ def load_model_from_zip(zip_file_path, model_filename):
 zip_file_path = 'modelPkl.zip'
 
 # Name of the model file inside the zip file (e.g., 'model.pkl')
-model_filename = 'model.pkl'
+model_filename = 'modelPkl.pkl'
 
 # Load the model from the zipped file
 try:
@@ -138,7 +138,7 @@ def main():
 
     Fear_loan_denial = st.select_box('Do you fear being denied loans?',['Yes','No'])
 
-     Use_emergency_savings = st.select_box('Do you use your savings in a financial emergency or other options like cut-backs or loans?',['Yes','No'])
+    Use_emergency_savings = st.select_box('Do you use your savings in a financial emergency or other options like cut-backs or loans?',['Yes','No'])
 
     Financial_Risk = st.select_box('Are you willing to take financial risks?',['Yes','No'])
 
